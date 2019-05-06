@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: http://www.xuweichao.com
+        predicates:
+        - Path=/about
+  main:
+      allow-bean-definition-overriding: true
